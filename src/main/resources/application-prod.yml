@@ -1,0 +1,13 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    password: '#Tennis07'
+    url: jdbc:mysql://db:3306/ems_db
+    username: ems_usr
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
