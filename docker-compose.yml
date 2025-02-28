@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   app:
     build: .
@@ -9,14 +8,20 @@ services:
       SPRING_DATASOURCE_USERNAME: ems_usr
       SPRING_DATASOURCE_PASSWORD: Federer07
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   db:
     image: mysql:8.0
     environment:
       MYSQL_ROOT_PASSWORD: Sqlrockstar
-      MYSQL_DATABASE: ems_db
+      MYSQL_DATABASE: new
       MYSQL_USER: ems_usr
       MYSQL_PASSWORD: Federer07
     ports:
       - "3309:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5

@@ -2,9 +2,9 @@ server:
   port: 8080
 spring:
   datasource:
-    password: '#Tennis07'
-    url: jdbc:mysql://db:3306/ems_db
-    username: ems_usr
+    SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL}
+    SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME}
+    SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD}
   jpa:
     hibernate:
       ddl-auto: update

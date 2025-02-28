@@ -1,3 +1,8 @@
 spring:
   profiles:
-    active: dev
+    active: docker
+# Production-specific configurations
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost,http://backend,http://frontend,http://127.0.0.1}
+
+
