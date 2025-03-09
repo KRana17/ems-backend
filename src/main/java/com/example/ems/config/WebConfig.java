@@ -10,7 +10,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**") // Apply to all endpoints under /api
-                .allowedOrigins("http://localhostgi ") // Your React app's URL
+                .allowedOrigins("http://localhost") // Your React app's URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE"); // Allow these methods
         //.allowedHeaders("*"); // Optional: Allow all headers (use with caution in production)
     }

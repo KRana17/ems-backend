@@ -9,6 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class EmsBackendApplication {
 
 	public static void main(String[] args) {
+		System.setProperty("server.address", "0.0.0.0");
 		SpringApplication.run(EmsBackendApplication.class, args);
 	}
 
