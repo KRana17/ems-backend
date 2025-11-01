@@ -75,3 +75,4 @@ Why we left code unchanged
 
 If you want me to apply the optional changes (remove stray folder, change dependency scope in `build.gradle`, or rename/annotate profiles), tell me which items and I'll make the changes and run the test-suite.
 
+PR branch: feature/test-h2-config
